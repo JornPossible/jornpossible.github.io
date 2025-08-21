@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="nl">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Plantenverzorging Infographic
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0fdf4;
+        }
+        /* Style for the card container to enable 3D perspective */
+        .card-container {
+            perspective: 1000px;
+            cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+        }
+        /* The card flipper element */
+        .card-flipper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        /* The class that will be toggled by JavaScript to flip the card */
+        .card-flipper.is-flipped {
+            transform: rotateY(180deg);
+        }
+        /* Common styles for both front and back of the card */
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden; /* Safari */
+            border-radius: 1rem;
+            overflow: hidden;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Style for the back of the card, initially rotated */
+        .card-back {
+            transform: rotateY(180deg);
+            background-color: #166534; /* Dark green */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .plant-image {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+  </style>
+ </head>
+ <body class="p-4 sm:p-6 md:p-8">
+  <div class="max-w-7xl mx-auto">
+   <header class="text-center mb-10">
+    <h1 class="text-4xl md:text-5xl font-bold text-green-800">
+     Plantenpaspoort van Nina
+    </h1>
+    <p class="text-lg text-gray-600 mt-2">
+     Klik op een kaartje voor een leuk weetje!
+    </p>
+   </header>
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="card-container h-[550px]">
+     <div class="card-flipper">
+      <div class="card-front">
+       <img alt="Phyllostachya pink" class="plant-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a7f3d0/14532d?text=Phyllostachya+pink';" src="https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.s.m.083-1-3005.jpg&amp;w=1080&amp;q=80"/>
+       <div class="card-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+         Phyllostachya Pink
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+         <li class="flex items-start">
+          <svg class="icon text-yellow-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Licht:
+           </strong>
+           Helder indirect licht
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-8h-4M4 12H0m16 0h4m-4 4l-2 2m-8-8l-2-2m0 12l2-2m8 8l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Water:
+           </strong>
+           Licht vochtige potgrond, om de 3 a 4 dagen water.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Gevaar:
+           </strong>
+           Te natte grond en gevoelig voor ziekten.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 3v4M3 5h4M4 17v4m-1-2h4m11-4v4m-1-2h4m-4-11v4m-1-2h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Voeding:
+           </strong>
+           Tijdens groeiseizoen elke 4 tot 6 weken.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="card-back">
+       <div>
+        <h3 class="text-xl font-bold mb-2">
+         Leuk weetje!
+        </h3>
+        <p>
+         Deze plant wordt ook wel de 'Polka Dot Plant' genoemd vanwege de vrolijke, gestippelde bladeren.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="card-container h-[550px]">
+     <div class="card-flipper">
+      <div class="card-front">
+       <img alt="Phyllostachya white" class="plant-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a7f3d0/14532d?text=Phyllostachya+white';" src="https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.s.m.130-1-3005.jpg&amp;w=1080&amp;q=80"/>
+       <div class="card-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+         Phyllostachya White
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+         <li class="flex items-start">
+          <svg class="icon text-yellow-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Licht:
+           </strong>
+           Helder indirect licht
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-8h-4M4 12H0m16 0h4m-4 4l-2 2m-8-8l-2-2m0 12l2-2m8 8l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Water:
+           </strong>
+           Licht vochtige potgrond, om de 3 a 4 dagen water.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Gevaar:
+           </strong>
+           Te natte grond en gevoelig voor ziekten.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 3v4M3 5h4M4 17v4m-1-2h4m11-4v4m-1-2h4m-4-11v4m-1-2h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Voeding:
+           </strong>
+           Tijdens groeiseizoen elke 4 tot 6 weken.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="card-back">
+       <div>
+        <h3 class="text-xl font-bold mb-2">
+         Leuk weetje!
+        </h3>
+        <p>
+         De intensiteit van de kleur op de bladeren hangt af van de hoeveelheid zonlicht die de plant krijgt.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="card-container h-[550px]">
+     <div class="card-flipper">
+      <div class="card-front">
+       <img alt="Elastica Robusta" class="plant-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a7f3d0/14532d?text=Elastica+Robusta';" src="https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.s.m.025-1-3005.jpg&amp;w=1080&amp;q=80"/>
+       <div class="card-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+         Elastica Robusta
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+         <li class="flex items-start">
+          <svg class="icon text-yellow-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Licht:
+           </strong>
+           Helder indirect licht, regelmatig draaien.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-8h-4M4 12H0m16 0h4m-4 4l-2 2m-8-8l-2-2m0 12l2-2m8 8l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Water:
+           </strong>
+           1x per week, grond mag beetje uitdrogen.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Gevaar:
+           </strong>
+           Vermijd tocht en te vaak verplaatsen (stress).
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 3v4M3 5h4M4 17v4m-1-2h4m11-4v4m-1-2h4m-4-11v4m-1-2h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Voeding:
+           </strong>
+           Regelmatig (1x/maand) tijdens groeiseizoen.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="card-back">
+       <div>
+        <h3 class="text-xl font-bold mb-2">
+         Leuk weetje!
+        </h3>
+        <p>
+         Het melkwitte sap van deze plant werd vroeger gebruikt om rubber van te maken, vandaar de bijnaam 'Rubberboom'.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="card-container h-[550px]">
+     <div class="card-flipper">
+      <div class="card-front">
+       <img alt="Spacecake" class="plant-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a7f3d0/14532d?text=Spacecake';" src="https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.s.m.126-3-3005.jpg&amp;w=1080&amp;q=80"/>
+       <div class="card-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+         Coleus Spacecake
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+         <li class="flex items-start">
+          <svg class="icon text-yellow-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Licht:
+           </strong>
+           Helder indirect licht.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-8h-4M4 12H0m16 0h4m-4 4l-2 2m-8-8l-2-2m0 12l2-2m8 8l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Water:
+           </strong>
+           Groeiseizoen elke 3-4 dagen, anders 1x/week.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Gevaar:
+           </strong>
+           Te veel licht veroorzaakt zonnebrand.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 3v4M3 5h4M4 17v4m-1-2h4m11-4v4m-1-2h4m-4-11v4m-1-2h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Voeding:
+           </strong>
+           1x per maand tijdens groeiseizoen.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="card-back">
+       <div>
+        <h3 class="text-xl font-bold mb-2">
+         Leuk weetje!
+        </h3>
+        <p>
+         De Coleus, ook wel Siernetel genoemd, is familie van de munt. Wrijf maar eens zachtjes over een blad, je ruikt het meteen!
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="card-container h-[550px]">
+     <div class="card-flipper">
+      <div class="card-front">
+       <img alt="Zebrina Calathea" class="plant-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a7f3d0/14532d?text=Zebrina+Calathea';" src="https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.s.m.034-1-3005.jpg&amp;w=1080&amp;q=80"/>
+       <div class="card-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+         Zebrina Calathea
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+         <li class="flex items-start">
+          <svg class="icon text-yellow-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Licht:
+           </strong>
+           Helder indirect licht.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-8h-4M4 12H0m16 0h4m-4 4l-2 2m-8-8l-2-2m0 12l2-2m8 8l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Water:
+           </strong>
+           2x per week een klein beetje.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Gevaar:
+           </strong>
+           Te natte grond, tocht, bladeren aanraken.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 3v4M3 5h4M4 17v4m-1-2h4m11-4v4m-1-2h4m-4-11v4m-1-2h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Voeding:
+           </strong>
+           1x per 2 weken, in de winter niet.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="card-back">
+       <div>
+        <h3 class="text-xl font-bold mb-2">
+         Leuk weetje!
+        </h3>
+        <p>
+         De bladeren van de Calathea bewegen mee met de zon. 's Avonds vouwen ze omhoog, waardoor hij de bijnaam 'Bidplant' krijgt.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="card-container h-[550px]">
+     <div class="card-flipper">
+      <div class="card-front">
+       <img alt="Strelitzia Nicolai" class="plant-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a7f3d0/14532d?text=Strelitzia+Nicolai';" src="https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.xxl.008-1-19_12.jpg&w=1080&q=80"/>
+       <div class="card-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+         Strelitzia Nicolai
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+         <li class="flex items-start">
+          <svg class="icon text-yellow-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Licht:
+           </strong>
+           Direct zonlicht, regelmatig draaien.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-8h-4M4 12H0m16 0h4m-4 4l-2 2m-8-8l-2-2m0 12l2-2m8 8l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Water:
+           </strong>
+           1x per week goede hoeveelheid, 's winters minder.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Gevaar:
+           </strong>
+           Scheuren in nieuwe bladeren (oplossen door sprayen).
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 3v4M3 5h4M4 17v4m-1-2h4m11-4v4m-1-2h4m-4-11v4m-1-2h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Voeding:
+           </strong>
+           1x per 3 maanden, in de winter niet.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="card-back">
+       <div>
+        <h3 class="text-xl font-bold mb-2">
+         Leuk weetje!
+        </h3>
+        <p>
+         Deze plant staat bekend als de 'Paradijsvogelplant' omdat de spectaculaire bloem lijkt op een kleurrijke, tropische vogel.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="card-container h-[550px]">
+     <div class="card-flipper">
+      <div class="card-front">
+       <img alt="Zebrina Alocasia" class="plant-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a7f3d0/14532d?text=Alocasia+Zebrina';" src="https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.m.237-1.jpg&w=1200&q=80"/>
+       <div class="card-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+         Alocasia Zebrina
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+         <li class="flex items-start">
+          <svg class="icon text-yellow-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Licht:
+           </strong>
+           Veel indirect licht.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-8h-4M4 12H0m16 0h4m-4 4l-2 2m-8-8l-2-2m0 12l2-2m8 8l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Water:
+           </strong>
+           1x per week, bovenste laag laten drogen.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Gevaar:
+           </strong>
+           Gevoelig voor plagen, giftig voor huisdieren.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 3v4M3 5h4M4 17v4m-1-2h4m11-4v4m-1-2h4m-4-11v4m-1-2h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Voeding:
+           </strong>
+           Elke 2-3 weken in de zomer, 's winters niet.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="card-back">
+       <div>
+        <h3 class="text-xl font-bold mb-2">
+         Leuk weetje!
+        </h3>
+        <p>
+         De gestreepte stengels geven deze plant zijn bijnaam 'Zebraplant' of 'Tijgerplant'.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="card-container h-[550px]">
+     <div class="card-flipper">
+      <div class="card-front">
+       <img alt="Pannekoekenplant" class="plant-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a7f3d0/14532d?text=Pannekoekenplant';" src="https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.m.015-1-0106.jpg&w=1200&q=80"/>
+       <div class="card-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+         Pannekoekenplant
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+         <li class="flex items-start">
+          <svg class="icon text-yellow-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Licht:
+           </strong>
+           Veel direct licht.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-8h-4M4 12H0m16 0h4m-4 4l-2 2m-8-8l-2-2m0 12l2-2m8 8l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Water:
+           </strong>
+           1x per week.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Gevaar:
+           </strong>
+           Groeit snel, op tijd verpotten.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 3v4M3 5h4M4 17v4m-1-2h4m11-4v4m-1-2h4m-4-11v4m-1-2h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Voeding:
+           </strong>
+           Niet nodig.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="card-back">
+       <div>
+        <h3 class="text-xl font-bold mb-2">
+         Leuk weetje!
+        </h3>
+        <p>
+         Deze plant wordt ook wel de 'Chinese Money Plant' genoemd. Volgens de legende brengt het geluk en voorspoed aan de eigenaar.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="card-container h-[550px]">
+     <div class="card-flipper">
+      <div class="card-front">
+       <img alt="Lancifolia Insigne" class="plant-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a7f3d0/14532d?text=Lancifolia+Insigne';" src="https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.s.m.040-2-3005.jpg&w=1200&q=80"/>
+       <div class="card-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+         Lancifolia Insigne
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+         <li class="flex items-start">
+          <svg class="icon text-yellow-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Licht:
+           </strong>
+           Helder indirect licht.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-8h-4M4 12H0m16 0h4m-4 4l-2 2m-8-8l-2-2m0 12l2-2m8 8l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Water:
+           </strong>
+           1x per week, bovenste laag laten drogen.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Gevaar:
+           </strong>
+           Vermijd tocht, warmtebronnen, bladeren aanraken.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 3v4M3 5h4M4 17v4m-1-2h4m11-4v4m-1-2h4m-4-11v4m-1-2h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Voeding:
+           </strong>
+           Elke 2 weken, in de winter niet.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="card-back">
+       <div>
+        <h3 class="text-xl font-bold mb-2">
+         Leuk weetje!
+        </h3>
+        <p>
+         De bijnaam voor deze plant is 'Rattlesnake Plant' vanwege de opvallende, slangachtige patronen op de bladeren.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="card-container h-[550px]">
+     <div class="card-flipper">
+      <div class="card-front">
+       <img alt="Lyrata Ficus" class="plant-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a7f3d0/14532d?text=Lyrata+Ficus';" src="https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.xl.006-1-0106.jpg&w=1200&q=80"/>
+       <div class="card-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+         Lyrata Ficus
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+         <li class="flex items-start">
+          <svg class="icon text-yellow-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Licht:
+           </strong>
+           Helder indirect tot direct licht, regelmatig draaien.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-8h-4M4 12H0m16 0h4m-4 4l-2 2m-8-8l-2-2m0 12l2-2m8 8l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Water:
+           </strong>
+           1x per week, bovenste laag laten drogen.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Gevaar:
+           </strong>
+           Vermijd te vaak verplaatsen, verstevigen tegen omvallen.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 3v4M3 5h4M4 17v4m-1-2h4m11-4v4m-1-2h4m-4-11v4m-1-2h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Voeding:
+           </strong>
+           1x in de 2 maanden, winter niet.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="card-back">
+       <div>
+        <h3 class="text-xl font-bold mb-2">
+         Leuk weetje!
+        </h3>
+        <p>
+         Wordt ook wel 'Vioolbladplant' genoemd omdat de grote, leerachtige bladeren de vorm hebben van een viool.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="card-container h-[550px]">
+     <div class="card-flipper">
+      <div class="card-front">
+       <img alt="Ginseng Ficus" class="plant-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a7f3d0/14532d?text=Ginseng+Ficus';" src="https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.l.037-2-2106.jpg&w=1200&q=80"/>
+       <div class="card-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+         Ginseng Ficus
+        </h2>
+        <ul class="space-y-3 text-gray-700">
+         <li class="flex items-start">
+          <svg class="icon text-yellow-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Licht:
+           </strong>
+           Veel indirect licht.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-8h-4M4 12H0m16 0h4m-4 4l-2 2m-8-8l-2-2m0 12l2-2m8 8l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Water:
+           </strong>
+           1x in de twee weken, kan goed tegen droge grond.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Gevaar:
+           </strong>
+           Teveel water, bladval door stress (verplaatsen).
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="icon text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 3v4M3 5h4M4 17v4m-1-2h4m11-4v4m-1-2h4m-4-11v4m-1-2h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Voeding:
+           </strong>
+           1x in de 2 maanden, niet in de winter.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="card-back">
+       <div>
+        <h3 class="text-xl font-bold mb-2">
+         Leuk weetje!
+        </h3>
+        <p>
+         Deze plant wordt vaak gebruikt voor bonsai-kunst vanwege de dikke, buikige wortels die boven de grond uitsteken.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   // JavaScript to handle the card flip on click
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-container');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const flipper = this.querySelector('.card-flipper');
+                    flipper.classList.toggle('is-flipped');
+                });
+            });
+        });
+  </script>
+ </body>
+</html>
